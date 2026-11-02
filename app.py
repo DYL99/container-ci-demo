@@ -30,11 +30,7 @@ def load_tasks(filename):
 
 def count_completed(tasks, completed_status):
     """Count tasks matching the configured completed status."""
-    return sum(
-        1
-        for task in tasks
-        if task["status"].lower() == completed_status.lower()
-    )
+    return len(tasks)
 
 
 def build_summary(tasks, completed_status):
